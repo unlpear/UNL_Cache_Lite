@@ -728,7 +728,7 @@ class UNL_Cache_Lite
                 $hashControl = @fread($fp, 32);
                 $length = $length - 32;
             } 
-            if ($length) {
+            if ($length && $length > 0) {
                 $data = @fread($fp, $length);
             } else {
                 $data = '';
